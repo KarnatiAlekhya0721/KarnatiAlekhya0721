@@ -1,0 +1,70 @@
+name: Update README stats
+
+on:
+  schedule:
+    - cron: "0 6 * * *"
+
+  workflow_dispatch:
+
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/readme-stats.yml
+
+concurrency:
+  group: profile-readme-updates
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Require GH_PAT for accurate commit counts
+        env:
+          HAS_PAT: ${{ secrets.GH_PAT != '' }}
+        run: |
+          if [ "$HAS_PAT" != "true" ]; then
+            echo "::warning::GH_PAT secret is not set. The stats card falls back to GITHUB_TOKEN, which only sees public data from this repo — commit counts will be much lower than your real total (e.g. 155 instead of 400+)."
+            echo "::warning::Create a classic Personal Access Token with repo + read:user scopes and add it as repository secret GH_PAT."
+          fi
+
+      - name: Generate stats card
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: stats
+          options: username=${{ github.repository_owner }}&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&disable_animations=false&theme=dracula&locale=en&hide_border=false
+          path: profile/stats.svg
+          token: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
+
+      - name: Generate top languages card
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: top-langs
+          options: username=${{ github.repository_owner }}&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=dracula&hide_border=false
+          path: profile/top-langs.svg
+          token: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
+
+      - name: Commit cards
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add profile/*.svg
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "Update README stats cards"
+          for attempt in 1 2 3 4 5; do
+            git pull --rebase origin main
+            git push origin main && exit 0
+            echo "Push failed (attempt $attempt), retrying..."
+            sleep 3
+          done
+          exit 1
