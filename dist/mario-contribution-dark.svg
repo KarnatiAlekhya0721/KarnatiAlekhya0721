@@ -596,14 +596,15 @@
 <rect class="empty" x="754" y="96" width="10" height="10" rx="2" ry="2"/>
 <rect class="lvl1" x="754" y="110" width="10" height="10" rx="2" ry="2"/>
 <rect class="empty" x="754" y="124" width="10" height="10" rx="2" ry="2"/>
-<rect class="empty" x="768" y="40" width="10" height="10" rx="2" ry="2"/>
+<rect class="lvl4" x="768" y="40" width="10" height="10" rx="2" ry="2"/>
 <rect class="empty" x="768" y="54" width="10" height="10" rx="2" ry="2"/>
 <rect class="empty" x="768" y="68" width="10" height="10" rx="2" ry="2"/>
 <rect class="empty" x="768" y="82" width="10" height="10" rx="2" ry="2"/>
 <rect class="empty" x="768" y="96" width="10" height="10" rx="2" ry="2"/>
 <rect class="empty" x="768" y="110" width="10" height="10" rx="2" ry="2"/>
 <rect class="empty" x="768" y="124" width="10" height="10" rx="2" ry="2"/>
-<path id="mario-path" d="M 14 138 L 14 75.7 L 605.0 68 L 682.0 68 L 682.0 6 L 759.0 6 L 759.0 96 L 793 96 L 793 40 L 793 124 L 847 124" fill="none" stroke="#fb923c" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.7"/>
+<path id="mario-path" d="M 14 138 L 14 75.7 L 605.0 68 L 682.0 68 L 682.0 6 L 759.0 6 L 759.0 96 L 773.0 96 L 773.0 26 L 793 26 L 793 40 L 793 124 L 847 124" fill="none" stroke="#fb923c" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.7"/>
+<use href="#coin" x="768" y="28"><animate attributeName="opacity" values="1;1;0" keyTimes="0;0.9111644657863145;0.9411644657863145" dur="20s" repeatCount="indefinite"/></use>
 <line x1="797" y1="30" x2="797" y2="138" stroke="#8b949e" stroke-width="2"/>
 <polygon points="797,30 815,38 797,46" fill="#3fb950"/>
 <g><animateMotion dur="20s" repeatCount="indefinite" calcMode="linear"><mpath href="#mario-path"/></animateMotion><use href="#mario" x="-8" y="-12"/></g>
