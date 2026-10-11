@@ -445,14 +445,14 @@
 <rect class="empty" x="460" y="40" width="10" height="10" rx="2" ry="2"/>
 <rect class="empty" x="460" y="54" width="10" height="10" rx="2" ry="2"/>
 <rect class="empty" x="460" y="68" width="10" height="10" rx="2" ry="2"/>
-<rect class="empty" x="460" y="82" width="10" height="10" rx="2" ry="2"/>
+<rect class="lvl1" x="460" y="82" width="10" height="10" rx="2" ry="2"/>
 <rect class="empty" x="460" y="96" width="10" height="10" rx="2" ry="2"/>
 <rect class="empty" x="460" y="110" width="10" height="10" rx="2" ry="2"/>
 <rect class="empty" x="460" y="124" width="10" height="10" rx="2" ry="2"/>
 <rect class="empty" x="474" y="40" width="10" height="10" rx="2" ry="2"/>
 <rect class="empty" x="474" y="54" width="10" height="10" rx="2" ry="2"/>
 <rect class="empty" x="474" y="68" width="10" height="10" rx="2" ry="2"/>
-<rect class="lvl1" x="474" y="82" width="10" height="10" rx="2" ry="2"/>
+<rect class="empty" x="474" y="82" width="10" height="10" rx="2" ry="2"/>
 <rect class="empty" x="474" y="96" width="10" height="10" rx="2" ry="2"/>
 <rect class="empty" x="474" y="110" width="10" height="10" rx="2" ry="2"/>
 <rect class="empty" x="474" y="124" width="10" height="10" rx="2" ry="2"/>
@@ -524,16 +524,16 @@
 <rect class="empty" x="614" y="68" width="10" height="10" rx="2" ry="2"/>
 <rect class="empty" x="614" y="82" width="10" height="10" rx="2" ry="2"/>
 <rect class="empty" x="614" y="96" width="10" height="10" rx="2" ry="2"/>
-<rect class="empty" x="614" y="110" width="10" height="10" rx="2" ry="2"/>
+<rect class="lvl1" x="614" y="110" width="10" height="10" rx="2" ry="2"/>
 <rect class="empty" x="614" y="124" width="10" height="10" rx="2" ry="2"/>
-<rect class="empty" x="628" y="40" width="10" height="10" rx="2" ry="2"/>
+<rect class="lvl4" x="628" y="40" width="10" height="10" rx="2" ry="2"/>
 <rect class="empty" x="628" y="54" width="10" height="10" rx="2" ry="2"/>
 <rect class="empty" x="628" y="68" width="10" height="10" rx="2" ry="2"/>
 <rect class="empty" x="628" y="82" width="10" height="10" rx="2" ry="2"/>
 <rect class="empty" x="628" y="96" width="10" height="10" rx="2" ry="2"/>
-<rect class="lvl1" x="628" y="110" width="10" height="10" rx="2" ry="2"/>
+<rect class="empty" x="628" y="110" width="10" height="10" rx="2" ry="2"/>
 <rect class="empty" x="628" y="124" width="10" height="10" rx="2" ry="2"/>
-<rect class="lvl4" x="642" y="40" width="10" height="10" rx="2" ry="2"/>
+<rect class="empty" x="642" y="40" width="10" height="10" rx="2" ry="2"/>
 <rect class="empty" x="642" y="54" width="10" height="10" rx="2" ry="2"/>
 <rect class="empty" x="642" y="68" width="10" height="10" rx="2" ry="2"/>
 <rect class="empty" x="642" y="82" width="10" height="10" rx="2" ry="2"/>
@@ -603,8 +603,8 @@
 <rect class="empty" x="768" y="96" width="10" height="10" rx="2" ry="2"/>
 <rect class="empty" x="768" y="110" width="10" height="10" rx="2" ry="2"/>
 <rect class="empty" x="768" y="124" width="10" height="10" rx="2" ry="2"/>
-<path id="mario-path" d="M 14 138 L 14 75.7 L 479.0 68 L 556.0 68 L 556.0 6 L 633.0 6 L 633.0 96 L 647.0 96 L 647.0 26 L 793 26 L 793 40 L 793 124 L 847 124" fill="none" stroke="#fb923c" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.7"/>
-<use href="#coin" x="642" y="28"><animate attributeName="opacity" values="1;1;0" keyTimes="0;0.7599039615846338;0.7899039615846338" dur="20s" repeatCount="indefinite"/></use>
+<path id="mario-path" d="M 14 138 L 14 75.7 L 465.0 68 L 542.0 68 L 542.0 6 L 619.0 6 L 619.0 96 L 633.0 96 L 633.0 26 L 793 26 L 793 40 L 793 124 L 847 124" fill="none" stroke="#fb923c" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.7"/>
+<use href="#coin" x="628" y="28"><animate attributeName="opacity" values="1;1;0" keyTimes="0;0.7430972388955582;0.7730972388955583" dur="20s" repeatCount="indefinite"/></use>
 <line x1="797" y1="30" x2="797" y2="138" stroke="#8b949e" stroke-width="2"/>
 <polygon points="797,30 815,38 797,46" fill="#3fb950"/>
 <g><animateMotion dur="20s" repeatCount="indefinite" calcMode="linear"><mpath href="#mario-path"/></animateMotion><use href="#mario" x="-8" y="-12"/></g>
